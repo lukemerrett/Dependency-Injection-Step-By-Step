@@ -6,8 +6,4 @@
     <RootNamespace>StepTwo_IoC</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Application\" />
-  </ItemGroup>
-
 </Project>
