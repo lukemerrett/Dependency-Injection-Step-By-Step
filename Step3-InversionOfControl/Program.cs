@@ -1,12 +1,23 @@
-﻿using System;
+﻿using StepThree_InversionOfControl.Application;
+using System;
 
 namespace StepThree_InversionOfControl
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var userId = Guid.NewGuid();
+
+            var databaseConnection = new DatabaseConnection();
+            var userRepository = new UserRepository(databaseConnection);
+            var addressRepository = new AddressRepository(databaseConnection);
+
+            var userDetailsService = new UserDetailsService(userRepository, addressRepository);
+
+            var userDetails = userDetailsService.GetDetailsForUser(userId);
+
+            Console.WriteLine(userDetails);
         }
     }
 }
