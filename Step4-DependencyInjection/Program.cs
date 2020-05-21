@@ -1,12 +1,36 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using StepFour_DependencyInjection.Application;
+using StepFour_DependencyInjection.Interfaces;
+using System;
+using System.Linq;
 
-namespace StepThree_DependencyInjection
+namespace StepFour_DependencyInjection
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var userId = Guid.NewGuid();
+
+            var serviceProvider = RegisterDependencies();
+
+            var userDetailsService = serviceProvider.GetService<IUserDetailsService>();
+
+            var userDetails = userDetailsService.GetDetailsForUser(userId);
+
+            Console.WriteLine(userDetails);
+        }
+
+        private static ServiceProvider RegisterDependencies()
+        {
+            var serviceCollection = new ServiceCollection();
+
+            serviceCollection.AddTransient<IDatabaseConnection, DatabaseConnection>();
+            serviceCollection.AddTransient<IUserRepository, UserRepository>();
+            serviceCollection.AddTransient<IAddressRepository, AddressRepository>();
+            serviceCollection.AddTransient<IUserDetailsService, UserDetailsService>();
+
+            return serviceCollection.BuildServiceProvider();
         }
     }
 }
