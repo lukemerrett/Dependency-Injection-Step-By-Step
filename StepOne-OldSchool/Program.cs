@@ -1,12 +1,19 @@
-﻿using System;
+﻿using StepOne_OldSchool.Application;
+using System;
 
 namespace StepOne_OldSchool
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var userId = Guid.NewGuid();
+
+            var userDetailsService = new UserDetailsService();
+
+            var userDetails = userDetailsService.GetDetailsForUser(userId);
+
+            Console.WriteLine(userDetails);
         }
     }
 }
