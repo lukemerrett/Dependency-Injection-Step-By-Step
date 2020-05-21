@@ -6,9 +6,9 @@ namespace StepTwo_Interfaces.Application
 {
     public class UserDetailsService: IUserDetailsService
     {
-        private readonly UserRepository _userRepository;
+        private readonly IUserRepository _userRepository;
 
-        private readonly AddressRepository _addressRepository;
+        private readonly IAddressRepository _addressRepository;
 
         public UserDetailsService()
         {

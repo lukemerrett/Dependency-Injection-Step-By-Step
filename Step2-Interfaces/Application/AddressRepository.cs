@@ -7,7 +7,7 @@ namespace StepTwo_Interfaces.Application
 {
     public class AddressRepository : IAddressRepository
     {
-        private readonly DatabaseConnection _databaseConnection;
+        private readonly IDatabaseConnection _databaseConnection;
 
         public AddressRepository()
         {

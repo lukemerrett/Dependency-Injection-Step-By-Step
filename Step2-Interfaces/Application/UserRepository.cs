@@ -6,7 +6,7 @@ namespace StepTwo_Interfaces.Application
 {
     public class UserRepository : IUserRepository
     {
-        private readonly DatabaseConnection _databaseConnection;
+        private readonly IDatabaseConnection _databaseConnection;
 
         public UserRepository()
         {
