@@ -9,11 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - OldSchool", "1 - OldSch
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Inversion of Control", "2 - Inversion of Control", "{B3FD1DE0-A5AC-40A4-A17B-E936ED79218A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StepTwo-IoC", "Step2-IoC\StepTwo-IoC.csproj", "{2CDA730A-E08B-4BB2-AA27-075242CE0324}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StepTwo-IoC", "Step2-IoC\StepTwo-IoC.csproj", "{2CDA730A-E08B-4BB2-AA27-075242CE0324}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Dependency Injection", "3 - Dependency Injection", "{C60220C8-E0CD-4AE2-BEF3-8D494B6CDECB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StepThree-DI", "Step3-DI\StepThree-DI.csproj", "{D4AE0CCA-3A1A-4A15-A851-2E06584E0146}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StepThree-DI", "Step3-DI\StepThree-DI.csproj", "{D4AE0CCA-3A1A-4A15-A851-2E06584E0146}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{30C1001A-1859-4D46-935A-9B8194FDF171}"
 	ProjectSection(SolutionItems) = preProject
